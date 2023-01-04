@@ -17,3 +17,15 @@ jobs:
       - name: Check Ansible Version
         run: ansible --version 
 
+      - name: Generate Key
+        run: |
+          echo "${{ secrets.ANSIBLE_SSH_KEY }}" > ansible-key
+          chmod 400 ansible_key
+
+      - name: Check Inventory
+        run: ansible-inventory -i aws_ec2.yml --list
+
+
+
+      
+
