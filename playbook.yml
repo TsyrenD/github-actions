@@ -1,0 +1,5 @@
+- hosts: Web
+  tasks:
+  - name: "Update hostname"
+    hostname:
+      name: "{{ inventory_hostname }}"
