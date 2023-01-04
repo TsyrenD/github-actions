@@ -13,7 +13,7 @@ jobs:
     steps:
       # Git Clone/Pull
       - uses: actions/checkout@v3
-      
-      - name: Show Files
-        run: ls -lR  
+
+      - name: Check Ansible Version
+        run: ansible --version 
 
